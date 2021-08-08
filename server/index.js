@@ -8,9 +8,9 @@ const { addUser, getUser, removeUser, getUsersInRoom } = require('./users.js')
 const port = process.env.PORT || 5000
 const hostname = 'localhost'
 
-corsOption = {
+const corsOption = {
   cors: true,
-  origin: ['http://localhost:5000'],
+  origin: ['http://localhost:5000']
 }
 
 const router = require('./router')

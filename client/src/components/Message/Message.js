@@ -2,7 +2,7 @@ import React from 'react'
 import './Message.css'
 import Emoji from 'react-emoji'
 
-function Message({ message: { user, text }, name }) {
+function Message ({ message: { user, text }, name }) {
   let sentByCurrentUser = false
 
   const trimmedName = name.trim().toLowerCase()
@@ -11,7 +11,7 @@ function Message({ message: { user, text }, name }) {
     sentByCurrentUser = true
   }
 
-  let option2 = (
+  const option2 = (
     <div className='messageContianer justifyStart'>
       <div className='messageBox backgroundLight'>
         <p className='messageText colorDark'>{Emoji.emojify(text)}</p>
@@ -20,7 +20,7 @@ function Message({ message: { user, text }, name }) {
     </div>
   )
 
-  let option1 = (
+  const option1 = (
     <div className='messageContianer justifyEnd'>
       <p className='sentText pr-10'>{trimmedName}</p>
       <div className='messageBox backgroundBlue'>
