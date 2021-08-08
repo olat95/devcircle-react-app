@@ -11,9 +11,9 @@
   font-size: 1.2em;
 }
 
-/* input:focus, 
+input:focus, 
 textarea:focus, 
-select:focus{ outline: none; } */
+select:focus { outline: none }
 
 .sendButton {
   font-family: 'Rubik', sans-serif;
