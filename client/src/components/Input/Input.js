@@ -1,7 +1,7 @@
 import React from 'react'
 import './Input.css'
 
-function Input({ message, setMessage, sendMessage }) {
+function Input ({ message, setMessage, sendMessage }) {
   return (
     <form className='form'>
       <input

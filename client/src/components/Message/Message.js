@@ -11,21 +11,22 @@ function Message ({ message: { user, text }, name }) {
     sentByCurrentUser = true
   }
 
-  return sentByCurrentUser ? (
-    <div className='messageContianer justifyEnd'>
-      <p className='sentText pr-10'>{trimmedName}</p>
-      <div className='messageBox backgroundBlue'>
-        <p className='messageText colorWhite'>{Emoji.emojify(text)}</p>
+  return sentByCurrentUser ? 
+    (
+      <div className='messageContianer justifyEnd'>
+        <p className='sentText pr-10'>{trimmedName}</p>
+        <div className='messageBox backgroundBlue'>
+          <p className='messageText colorWhite'>{Emoji.emojify(text)}</p>
+        </div>
       </div>
-    </div>
-  ) : (
-    <div className='messageContianer justifyStart'>
-      <div className='messageBox backgroundLight'>
-        <p className='messageText colorDark'>{Emoji.emojify(text)}</p>
+    ) : (
+      <div className='messageContianer justifyStart'>
+        <div className='messageBox backgroundLight'>
+          <p className='messageText colorDark'>{Emoji.emojify(text)}</p>
+        </div>
+        <p className='sentText pl-10'>{user}</p>
       </div>
-      <p className='sentText pl-10'>{user}</p>
-    </div>
-  )
+    )
 }
 
 export default Message

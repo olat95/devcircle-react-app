@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Join from './components/Join/Join'
 import Chat from './components/Chatt/Chat'
 
-function App() {
+function App () {
   return (
     <div>
       <Router>
