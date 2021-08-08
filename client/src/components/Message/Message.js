@@ -2,7 +2,7 @@ import React from 'react'
 import './Message.css'
 import Emoji from 'react-emoji'
 
-function Message ({ message: { user, text }, name }) {
+function Message({ message: { user, text }, name }) {
   let sentByCurrentUser = false
 
   const trimmedName = name.trim().toLowerCase()
@@ -11,22 +11,25 @@ function Message ({ message: { user, text }, name }) {
     sentByCurrentUser = true
   }
 
-  return sentByCurrentUser ? 
-    (
-      <div className='messageContianer justifyEnd'>
-        <p className='sentText pr-10'>{trimmedName}</p>
-        <div className='messageBox backgroundBlue'>
-          <p className='messageText colorWhite'>{Emoji.emojify(text)}</p>
-        </div>
+  let option2 = (
+    <div className='messageContianer justifyStart'>
+      <div className='messageBox backgroundLight'>
+        <p className='messageText colorDark'>{Emoji.emojify(text)}</p>
       </div>
-    ) : (
-      <div className='messageContianer justifyStart'>
-        <div className='messageBox backgroundLight'>
-          <p className='messageText colorDark'>{Emoji.emojify(text)}</p>
-        </div>
-        <p className='sentText pl-10'>{user}</p>
+      <p className='sentText pl-10'>{user}</p>
+    </div>
+  )
+
+  let option1 = (
+    <div className='messageContianer justifyEnd'>
+      <p className='sentText pr-10'>{trimmedName}</p>
+      <div className='messageBox backgroundBlue'>
+        <p className='messageText colorWhite'>{Emoji.emojify(text)}</p>
       </div>
-    )
+    </div>
+  )
+
+  return sentByCurrentUser ? option1 : option2
 }
 
 export default Message
