@@ -1,31 +1,31 @@
-import React from "react";
-import "./Message.css";
-import Emoji from "react-emoji";
+import React from 'react'
+import './Message.css'
+import Emoji from 'react-emoji'
 
-function Message({ message: { user, text }, name }) {
-  let sentByCurrentUser = false;
+function Message ({ message: { user, text }, name }) {
+  let sentByCurrentUser = false
 
-  const trimmedName = name.trim().toLowerCase();
+  const trimmedName = name.trim().toLowerCase()
 
   if (user === trimmedName) {
-    sentByCurrentUser = true;
+    sentByCurrentUser = true
   }
 
   return sentByCurrentUser ? (
-    <div className="messageContianer justifyEnd">
-      <p className="sentText pr-10">{trimmedName}</p>
-      <div className="messageBox backgroundBlue">
-        <p className="messageText colorWhite">{Emoji.emojify(text)}</p>
+    <div className='messageContianer justifyEnd'>
+      <p className='sentText pr-10'>{trimmedName}</p>
+      <div className='messageBox backgroundBlue'>
+        <p className='messageText colorWhite'>{Emoji.emojify(text)}</p>
       </div>
     </div>
   ) : (
-    <div className="messageContianer justifyStart">
-      <div className="messageBox backgroundLight">
-        <p className="messageText colorDark">{Emoji.emojify(text)}</p>
+    <div className='messageContianer justifyStart'>
+      <div className='messageBox backgroundLight'>
+        <p className='messageText colorDark'>{Emoji.emojify(text)}</p>
       </div>
-      <p className="sentText pl-10">{user}</p>
+      <p className='sentText pl-10'>{user}</p>
     </div>
-  );
+  )
 }
 
-export default Message;
+export default Message
