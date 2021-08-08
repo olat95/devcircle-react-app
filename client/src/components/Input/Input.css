@@ -12,10 +12,8 @@
 }
 
 input:focus
-,textarea:focus
-,select:focus {
-  outline: none;
-}
+, textarea:focus
+, select:focus { outline: none; }
 
 .sendButton {
   font-family: 'Rubik', sans-serif;

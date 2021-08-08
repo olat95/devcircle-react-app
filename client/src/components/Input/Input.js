@@ -11,9 +11,7 @@ function Input ({ message, setMessage, sendMessage }) {
         value={message}
         // onChange={(event) => setMessage(event.target.value)}
         onChange={({ target: { value } }) => setMessage(value)}
-        onKeyPress={(event) =>
-          event.key === 'Enter' ? sendMessage(event) : null
-        }
+        onKeyPress={(event) => event.key === 'Enter' ? sendMessage(event) : null}
       />
       <button className='sendButton' onClick={(event) => sendMessage(event)}>
         Send
